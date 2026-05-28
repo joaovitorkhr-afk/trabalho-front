@@ -1,0 +1,233 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    line-height: 1.6;
+    transition: 0.4s;
+}
+
+/* Tema claro */
+body.tema-claro {
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #141414;
+    padding: 20px 40px;
+    border-bottom: 2px solid #a2e22b;
+    position: sticky;
+    top: 0;
+}
+
+body.tema-claro header {
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #48bb1b;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+body.tema-claro .menu a {
+    color: #222;
+}
+
+.menu a:hover {
+    color: #41e632;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.foto-de-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #17c520;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    color: #4ecf3d;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Botões */
+button {
+    margin-top: 20px;
+    background-color: #cf5b0d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #44d430;
+}
+
+body.tema-claro .card {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: #1cbe1c;
+    margin-bottom: 20px;
+}
+
+/* Tecnologias e Habilidades */
+.lista-tecnologias,
+.lista-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+.lista-tecnologias li,
+.lista-habilidades li {
+    background-color: #2d2d2d;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+body.tema-claro .lista-tecnologias li,
+body.tema-claro .lista-habilidades li {
+    background-color: #ececec;
+}
+
+/* Projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projeto {
+    flex: 1;
+    min-width: 250px;
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+body.tema-claro .projeto {
+    background-color: #f0f0f0;
+}
+
+.projeto h3 {
+    color: #31c224;
+    margin-bottom: 10px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.informacoes-contato {
+    margin-top: 25px;
+}
+
+.informacoes-contato a {
+    color: #1cd41c;
+    text-decoration: none;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #141414;
+    border-top: 2px solid #2dca18;
+}
+
+body.tema-claro footer {
+    background-color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .projetos-container {
+        flex-direction: column;
+    }
+}
